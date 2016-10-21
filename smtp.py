@@ -54,7 +54,7 @@ recv45 = clientSocket.recv(1024)
 if recv45.startswith("354"):
 	print "[Awaiting Input]"
 
-data = "Date: %s\r\nFrom: %s <%s>\r\nSubject:%s\r\nTo: %s\r\n\n%s\r\n.\r\n" % (date, fromName, fromAddress, subject, toAddress, body)
+data = "Content-Type: text/html;\r\n charset=\"ISO-8859-1\";\r\nMime-Version: 1.0\r\nDate: %s\r\nFrom: %s <%s>\r\nSubject:%s\r\nTo: %s\r\n\n%s\r\n.\r\n" % (date, fromName, fromAddress, subject, toAddress, body)
 clientSocket.send(data)
 recv4 = clientSocket.recv(1024)
 
