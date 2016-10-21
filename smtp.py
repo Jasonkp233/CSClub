@@ -11,15 +11,9 @@ end = '\033[0m'
 bold = '\033[1m'
 Amherst = False
 
-auth = getpass.getpass("Confirm identity: ")
+print green + "Welcome..." + end
 
-if auth != "keepsummersafe":
-	print red + "Incorrect" + end
-	sys.exit()
-
-print green + "Welcome Noah" + end
-
-msg = "\r\EHLO noah"
+msg = "\r\EHLO bob"
 mailserver = "smtp.amherst.edu"
 serverPort = 25
 
